@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Android.Media;
@@ -42,7 +43,7 @@ namespace TodoLibrary
             {
                 Todo t = new Todo(ChoiceTitle, ChoiceDescription);
                 Todos.Add(t);
-                NavigationService.Navigate("HomeViewModel");
+                NavigationService.GoBack();
             }
         }
     }

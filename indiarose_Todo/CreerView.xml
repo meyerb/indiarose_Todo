@@ -13,7 +13,7 @@
             />
   <Button android:layout_width="match_parent"
           android:layout_height="wrap_content"
-          Text="Creer Todo"
+          android:text="Creer Todo"
           Click="{Binding ButtonCommand}"
           />
 </LinearLayout>
