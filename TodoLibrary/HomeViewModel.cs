@@ -3,36 +3,45 @@ using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Storm.Mvvm;
 using Storm.Mvvm.Commands;
+using Storm.Mvvm.Navigation;
 using TodoLibrary;
 
-public class HomeViewModel : ViewModelBase
+namespace TodoLibrary
 {
-    private ObservableCollection<Todo> _todos;
-    private int _index;
-
-    public int Index
+    public class HomeViewModel : ViewModelBase
     {
-        get { return _index; }
-        set { SetProperty(ref _index, value); }
-    }
+        private ObservableCollection<Todo> _todos;
+        private int _index;
 
-    public ObservableCollection<Todo> Todos { get { return _todos;} set { _todos = value; } }
+        public int Index
+        {
+            get { return _index; }
+            set { SetProperty(ref _index, value); }
+        }
 
-    // Since it will only be affected once, we do not need to raise the PropertyChanged event there
-    public ICommand ButtonCommand { get; private set; }
+        [NavigationParameter]
+        public ObservableCollection<Todo> Todos
+        {
+            get { return _todos; }
+            set { _todos = value; }
+        }
 
-    public HomeViewModel()
-    {
-        ButtonCommand = new DelegateCommand(ButtonClicked);
-        Todos=new ObservableCollection<Todo>();
-        Todo t1 = new Todo("aaffffffff","bb");
-        Todos.Add(t1);
-        Todo t2 = new Todo("ccfffffff", "dd");
-        Todos.Add(t2);
-    }
+        // Since it will only be affected once, we do not need to raise the PropertyChanged event there
+        public ICommand ButtonCommand { get; private set; }
 
-    private void ButtonClicked()
-    {
-        NavigationService.Navigate("CreerTodo",new Dictionary <string,object>() { {"Todos", Todos} });
+        public HomeViewModel()
+        {
+            ButtonCommand = new DelegateCommand(ButtonClicked);
+            Todos = new ObservableCollection<Todo>();
+            Todo t1 = new Todo("aaffffffff", "bb");
+            Todos.Add(t1);
+            Todo t2 = new Todo("ccfffffff", "dd");
+            Todos.Add(t2);
+        }
+
+        private void ButtonClicked()
+        {
+            NavigationService.Navigate("CreerTodo", new Dictionary<string, object>() {{"Todos", Todos}});
+        }
     }
 }
