@@ -1,15 +1,25 @@
 ﻿{
-    "namespaces": [ "indiarose_Todo" ],
-    "fileDescriptions": [
-        {
-            "activity": {
-                "namespaceName": "indiarose_Todo",
-              "className": "HomeActivity"
-            },
-            "view": {
-                "inputFile": "HomeView.xml",
-                "outputFile": "Home.axml"
-            }
-        }
-    ]
+  "namespaces": [ "indiarose_Todo" ],
+  "fileDescriptions": [
+    {
+      "activity": {
+        "namespaceName": "indiarose_Todo",
+        "className": "HomeActivity"
+      },
+      "view": {
+        "inputFile": "HomeView.xml",
+        "outputFile": "Home.axml"
+      }
+    },
+    {
+      "activity": {
+        "namespaceName": "indiarose_Todo",
+        "className": "CreerActivity"
+      },
+      "view": {
+        "inputFile": "CreerView.xml",
+        "outputFile": "Creer.axml"
+      }
+    }
+  ]
 }

@@ -5,6 +5,7 @@ using System.Text;
 using System.Windows.Input;
 using Android.App;
 using Android.Content;
+using Android.Content.Res;
 using Android.OS;
 using Android.Runtime;
 using Android.Views;

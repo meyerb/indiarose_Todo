@@ -13,7 +13,7 @@ namespace indiarose_Todo
             base.OnCreate(bundle);
 
             // Set our view from the home file in layout
-            SetContentView(Resource.Layout.Home);
+            SetContentView(Resource.Layout.Creer);
             // Set our view model
             SetViewModel(new CreerTodo());
         }
