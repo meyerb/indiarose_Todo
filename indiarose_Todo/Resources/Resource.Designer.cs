@@ -63,13 +63,13 @@ namespace indiarose_Todo
 		{
 			
 			// aapt resource value: 0x7f050000
-			public const int Generated_ViewElement_0 = 2131034112;
+			public const int Generated_ViewElement_45 = 2131034112;
 			
 			// aapt resource value: 0x7f050001
-			public const int Generated_ViewElement_1 = 2131034113;
+			public const int Generated_ViewElement_46 = 2131034113;
 			
 			// aapt resource value: 0x7f050002
-			public const int Generated_ViewElement_2 = 2131034114;
+			public const int Generated_ViewElement_47 = 2131034114;
 			
 			static Id()
 			{
@@ -86,6 +86,9 @@ namespace indiarose_Todo
 			
 			// aapt resource value: 0x7f030000
 			public const int Home = 2130903040;
+			
+			// aapt resource value: 0x7f030001
+			public const int Home_DT_SizeTemplate = 2130903041;
 			
 			static Layout()
 			{

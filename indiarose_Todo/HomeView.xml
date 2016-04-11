@@ -1,21 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
-    <Button android:layout_width="match_parent"
+                      android:orientation="horizontal"
+                      android:layout_width="fill_parent"
+                      android:layout_height="fill_parent">>
+<Resources xmlns:converters="using Storm.Mvvm.Converters">
+  <DataTemplate Key="SizeTemplate">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                      android:orientation="horizontal"
+                      android:layout_width="fill_parent"
+                      android:layout_height="fill_parent">
+      <TextView android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                text="{Binding Title}"
+    />
+    </LinearLayout>
+  </DataTemplate>
+</Resources>
+
+  <BindableListView android:layout_width="150dip"
+             android:layout_height="wrap_content"
+             adapter="{Binding Todos, Template={Resource SizeTemplate}}" />
+  <Button android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            Click="{Binding ButtonCommand}"
-            Text="{Binding ButtonText}"
-            />
-     
-    <EditText android:layout_width="match_parent"
-              android:layout_height="60dp"
-              Text="{Binding Name, Mode=TwoWay, UpdateEvent=TextChanged}"
-              />
-               
-    <TextView android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              Text="{Binding Greetings}"
-              />
-</LinearLayout>
+            android:text="Add a new Todo"
+            Click="{Binding ButtonCommand}"/>
+  </LinearLayout>

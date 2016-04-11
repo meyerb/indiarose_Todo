@@ -89,6 +89,9 @@
     <Folder Include="Resources\layout\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="CreerTodo.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="HomeView.xml">
       <SubType>Designer</SubType>
     </Content>
