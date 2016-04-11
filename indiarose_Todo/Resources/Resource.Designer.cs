@@ -63,13 +63,13 @@ namespace indiarose_Todo
 		{
 			
 			// aapt resource value: 0x7f050000
-			public const int Generated_ViewElement_45 = 2131034112;
+			public const int Generated_ViewElement_3 = 2131034112;
 			
 			// aapt resource value: 0x7f050001
-			public const int Generated_ViewElement_46 = 2131034113;
+			public const int Generated_ViewElement_4 = 2131034113;
 			
 			// aapt resource value: 0x7f050002
-			public const int Generated_ViewElement_47 = 2131034114;
+			public const int Generated_ViewElement_5 = 2131034114;
 			
 			static Id()
 			{

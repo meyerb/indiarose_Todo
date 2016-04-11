@@ -3,7 +3,17 @@
               android:orientation="vertical"
               android:layout_width="match_parent"
               android:layout_height="match_parent">
-  <TextView android:layout_width="match_parent"
+  <EditText android:layout_width="match_parent"
           android:layout_height="wrap_content"
-            Text="Creer"/>
+            Text="{Binding ChoiceTitle,Mode=TwoWay,UpdateEvent=TextChanged}"
+            />
+  <EditText android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+            Text="{Binding ChoiceDescription,Mode=TwoWay,UpdateEvent=TextChanged}"
+            />
+  <Button android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          Text="Creer Todo"
+          Click="{Binding ButtonCommand}"
+          />
 </LinearLayout>

@@ -4,7 +4,7 @@
         {
             "activity": {
                 "namespaceName": "indiarose_Todo",
-                "className": "HomeActivity"
+              "className": "HomeActivity"
             },
             "view": {
                 "inputFile": "HomeView.xml",

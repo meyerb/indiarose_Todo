@@ -9,7 +9,7 @@
                       android:orientation="horizontal"
                       android:layout_width="fill_parent"
                       android:layout_height="fill_parent">
-      <TextView android:layout_width="wrap_content"
+      <Button android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 text="{Binding Title}"
     />
@@ -22,6 +22,7 @@
              adapter="{Binding Todos, Template={Resource SizeTemplate}}" />
   <Button android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
             android:text="Add a new Todo"
             Click="{Binding ButtonCommand}"/>
   </LinearLayout>

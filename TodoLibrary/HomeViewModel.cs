@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Storm.Mvvm;
@@ -24,15 +25,14 @@ public class HomeViewModel : ViewModelBase
     {
         ButtonCommand = new DelegateCommand(ButtonClicked);
         Todos=new ObservableCollection<Todo>();
-        Todo t1=new Todo("aa","bb");
+        Todo t1 = new Todo("aaffffffff","bb");
         Todos.Add(t1);
-        Todo t2 = new Todo("cc", "dd");
+        Todo t2 = new Todo("ccfffffff", "dd");
         Todos.Add(t2);
     }
 
     private void ButtonClicked()
     {
-        Todos.Add(new Todo("ccc","sss"));
-        //base.NavigationService.Navigate("HomeViewModel");
+        NavigationService.Navigate("CreerTodo",new Dictionary <string,object>() { {"Todos", Todos} });
     }
 }

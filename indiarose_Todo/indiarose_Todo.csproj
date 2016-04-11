@@ -63,6 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreerActivity.cs" />
     <Compile Include="HomeActivity.cs" />
     <Compile Include="MyMvvmApplication.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
