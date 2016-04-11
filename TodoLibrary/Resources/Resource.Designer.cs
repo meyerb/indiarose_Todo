@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("indiarose_Todo.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("TodoLibrary.Resource", IsApplication=false)]
 
-namespace indiarose_Todo
+namespace TodoLibrary
 {
 	
 	
@@ -22,12 +22,6 @@ namespace indiarose_Todo
 		static Resource()
 		{
 			global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-		}
-		
-		public static void UpdateIdValues()
-		{
-			global::TodoLibrary.Resource.String.ApplicationName = global::indiarose_Todo.Resource.String.ApplicationName;
-			global::TodoLibrary.Resource.String.Hello = global::indiarose_Todo.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
@@ -43,30 +37,14 @@ namespace indiarose_Todo
 			}
 		}
 		
-		public partial class Drawable
-		{
-			
-			// aapt resource value: 0x7f020000
-			public const int Icon = 2130837504;
-			
-			static Drawable()
-			{
-				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
-			}
-			
-			private Drawable()
-			{
-			}
-		}
-		
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f030001
-			public const int ApplicationName = 2130903041;
+			// aapt resource value: 0x7f020001
+			public static int ApplicationName = 2130837505;
 			
-			// aapt resource value: 0x7f030000
-			public const int Hello = 2130903040;
+			// aapt resource value: 0x7f020000
+			public static int Hello = 2130837504;
 			
 			static String()
 			{

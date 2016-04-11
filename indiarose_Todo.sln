@@ -4,6 +4,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "indiarose_Todo", "indiarose_Todo\indiarose_Todo.csproj", "{C57856D3-962A-4A4D-B455-9EB027AB05B0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{DFF34B3C-3708-47A4-AB0D-DF3610587AF4} = {DFF34B3C-3708-47A4-AB0D-DF3610587AF4}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoLibrary", "TodoLibrary\TodoLibrary.csproj", "{DFF34B3C-3708-47A4-AB0D-DF3610587AF4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,6 +22,10 @@ Global
 		{C57856D3-962A-4A4D-B455-9EB027AB05B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C57856D3-962A-4A4D-B455-9EB027AB05B0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C57856D3-962A-4A4D-B455-9EB027AB05B0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{DFF34B3C-3708-47A4-AB0D-DF3610587AF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFF34B3C-3708-47A4-AB0D-DF3610587AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFF34B3C-3708-47A4-AB0D-DF3610587AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFF34B3C-3708-47A4-AB0D-DF3610587AF4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,15 @@
+﻿{
+    "namespaces": [ "indiarose_Todo" ],
+    "fileDescriptions": [
+        {
+            "activity": {
+                "namespaceName": "indiarose_Todo",
+                "className": "HomeActivity"
+            },
+            "view": {
+                "inputFile": "HomeView.xml",
+                "outputFile": "Home.axml"
+            }
+        }
+    ]
+}
