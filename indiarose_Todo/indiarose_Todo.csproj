@@ -71,7 +71,7 @@
   <ItemGroup>
     <None Include="ActivityDescription.json" />
     <None Include="GettingStarted.Xamarin" />
-    <None Include="indiarose_Todo.json" />
+    <BindingProcess Include="indiarose_Todo.json" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
