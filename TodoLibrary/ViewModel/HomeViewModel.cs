@@ -12,11 +12,18 @@ namespace TodoLibrary.ViewModel
     {
         private ObservableCollection<Todo> _todos;
         private int _index;
+        private object _testobject;
 
         public int Index
         {
             get { return _index; }
             set { SetProperty(ref _index, value); }
+        }
+
+        public object TestObject
+        {
+            get { return _testobject; }
+            set { SetProperty(ref _testobject, value); }
         }
 
         [NavigationParameter]
@@ -28,10 +35,12 @@ namespace TodoLibrary.ViewModel
 
         // Since it will only be affected once, we do not need to raise the PropertyChanged event there
         public ICommand ButtonCommand { get; private set; }
+        public ICommand ButtonSelection { get; private set; }
 
         public HomeViewModel()
         {
             ButtonCommand = new DelegateCommand(ButtonClicked);
+            ButtonSelection = new DelegateCommand(ButtonSelected);
             Todos = new ObservableCollection<Todo>
             {
                 new Todo("aaffffffff","bb"),
@@ -42,6 +51,12 @@ namespace TodoLibrary.ViewModel
         private void ButtonClicked()
         {
             NavigationService.Navigate("CreerTodo", new Dictionary<string, object> { { "Todos", Todos } });
+        }
+
+        private void ButtonSelected()
+        {
+            if(TestObject!=null)
+                NavigationService.Navigate("EditDeleteTodo", new Dictionary<string, object> { { "TestObject", TestObject}, { "Todos", Todos } } );
         }
     }
 }

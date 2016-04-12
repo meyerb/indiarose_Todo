@@ -15,7 +15,7 @@ namespace TodoLibrary.Model
             get { return _title; }
             set { SetProperty(ref _title, value); }
         }
-        public string Dexcription
+        public string Description
         {
             get { return _description; }
             set { SetProperty(ref _description, value); }

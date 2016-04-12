@@ -20,6 +20,16 @@
         "inputFile": "Views/CreerView.xml",
         "outputFile": "Creer.axml"
       }
+    },
+    {
+      "activity": {
+        "namespaceName": "indiarose_Todo.Activities",
+        "className": "EditDeleteActivity"
+      },
+      "view": {
+        "inputFile": "Views/EditDeleteView.xml",
+        "outputFile": "EditDelete.axml"
+      }
     }
   ]
 }

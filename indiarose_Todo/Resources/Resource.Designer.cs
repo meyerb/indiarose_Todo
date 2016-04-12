@@ -60,23 +60,32 @@ namespace indiarose_Todo
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050003
-			public const int Generated_ViewElement_12 = 2131034115;
-			
-			// aapt resource value: 0x7f050004
-			public const int Generated_ViewElement_13 = 2131034116;
-			
 			// aapt resource value: 0x7f050005
-			public const int Generated_ViewElement_14 = 2131034117;
+			public const int Generated_ViewElement_72 = 2131034117;
+			
+			// aapt resource value: 0x7f050006
+			public const int Generated_ViewElement_73 = 2131034118;
+			
+			// aapt resource value: 0x7f050007
+			public const int Generated_ViewElement_74 = 2131034119;
+			
+			// aapt resource value: 0x7f050008
+			public const int Generated_ViewElement_75 = 2131034120;
 			
 			// aapt resource value: 0x7f050000
-			public const int Generated_ViewElement_15 = 2131034112;
+			public const int Generated_ViewElement_76 = 2131034112;
 			
 			// aapt resource value: 0x7f050001
-			public const int Generated_ViewElement_16 = 2131034113;
+			public const int Generated_ViewElement_77 = 2131034113;
 			
 			// aapt resource value: 0x7f050002
-			public const int Generated_ViewElement_17 = 2131034114;
+			public const int Generated_ViewElement_78 = 2131034114;
+			
+			// aapt resource value: 0x7f050003
+			public const int Generated_ViewElement_79 = 2131034115;
+			
+			// aapt resource value: 0x7f050004
+			public const int Generated_ViewElement_80 = 2131034116;
 			
 			static Id()
 			{
@@ -95,10 +104,13 @@ namespace indiarose_Todo
 			public const int Creer = 2130903040;
 			
 			// aapt resource value: 0x7f030001
-			public const int Home = 2130903041;
+			public const int EditDelete = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Home_DT_SizeTemplate = 2130903042;
+			public const int Home = 2130903042;
+			
+			// aapt resource value: 0x7f030003
+			public const int Home_DT_SizeTemplate = 2130903043;
 			
 			static Layout()
 			{

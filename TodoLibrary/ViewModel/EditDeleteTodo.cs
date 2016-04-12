@@ -14,26 +14,57 @@ namespace TodoLibrary.ViewModel
         public ObservableCollection<Todo> Todos { get; set; }
 
         [NavigationParameter]
-        public Todo TodoActual { get; set; }
+        public object TestObject { get; set; }
 
         public ICommand ButtonEdit { get; private set; }
         public ICommand ButtonDelete { get; private set; }
 
-        public EditDeleteTodo(Todo t)
+        private string _title;
+        private string _description;
+        private Todo _todoselect;
+
+        public string Title
         {
-            TodoActual = t;
+            get { return _title; }
+            set { SetProperty(ref _title, value); }
+        }
+        public string Description
+        {
+            get { return _description; }
+            set { SetProperty(ref _description, value); }
+        }
+
+        private Todo TodoSelect
+        {
+            get { return _todoselect; }
+            set { SetProperty(ref _todoselect, value); }
+        }
+
+        public EditDeleteTodo()
+        {
             ButtonDelete = new DelegateCommand(DeleteClicked);
             ButtonEdit = new DelegateCommand(EditClicked);
+            TodoSelect = TestObject as Todo;
+            if (TodoSelect != null)
+            {
+                Title = TodoSelect.Title;
+                Description = TodoSelect.Description;
+            }
+            else
+            {
+                Title = "TitreRandom";
+                Description = "DescriptionRandom";
+            }
         }
 
         private void DeleteClicked()
         {
-            Todos.Remove(TodoActual);
+            Todos.Remove(TestObject as Todo);
             NavigationService.GoBack();
         }
         private void EditClicked()
         {
-            NavigationService.Navigate("EditTodo", new Dictionary<string, object>() { { "TodoActual", TodoActual }, { "Todos", Todos } });
+            //NavigationService.Navigate("EditTodo", new Dictionary<string, object>() { { "TestObject", TestObject }, { "Todos", Todos } });
         }
     }
 }

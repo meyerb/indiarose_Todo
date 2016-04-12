@@ -21,7 +21,8 @@ namespace indiarose_Todo
             Dictionary<string, Type> d = new Dictionary<string, Type>
             {
                 {"HomeViewModel", typeof (HomeActivity)},
-                {"CreerTodo", typeof (CreerActivity)}
+                {"CreerTodo", typeof (CreerActivity)},
+                {"EditDeleteTodo" , typeof(EditDeleteActivity)}
             };
             base.OnCreate();
             AndroidContainer.CreateInstance<AndroidContainer>(this, d);

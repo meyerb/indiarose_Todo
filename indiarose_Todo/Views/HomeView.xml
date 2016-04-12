@@ -20,9 +20,14 @@
 
   <BindableListView android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             adapter="{Binding Todos, Template={Resource SizeTemplate}}" />
+             adapter="{Binding Todos, Template={Resource SizeTemplate}}"
+             CurrentItem="{Binding TestObject, Mode=TwoWay, UpdateEvent=CurrentItemChanged}" />
   <Button android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add a new Todo"
             Click="{Binding ButtonCommand}"/>
+  <Button android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="Edit/Delete"
+           Click="{Binding ButtonSelection}"/>
 </LinearLayout>
