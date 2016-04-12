@@ -15,7 +15,7 @@ using Android.Service;
 
 namespace TodoLibrary.Model
 {
-    class TodoService : ITodoService
+    public class TodoService : ITodoService
     {
         ObservableCollection<Todo> _todos;
 

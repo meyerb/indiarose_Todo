@@ -14,7 +14,7 @@ using TodoLibrary.Model;
 
 namespace TodoLibrary.Services
 {
-    interface ITodoService
+    public interface ITodoService
     {
         void StartTodos();
 

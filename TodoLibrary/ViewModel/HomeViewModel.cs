@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Storm.Mvvm;
 using Storm.Mvvm.Commands;
+using Storm.Mvvm.Inject;
 using Storm.Mvvm.Navigation;
 using Storm.Mvvm.Services;
 using TodoLibrary.Model;
@@ -29,6 +30,7 @@ namespace TodoLibrary.ViewModel
 
         [NavigationParameter]
 
+        public ITodoService TodoService => LazyResolver<ITodoService>.Service;
 
         // Since it will only be affected once, we do not need to raise the PropertyChanged event there
         public ICommand ButtonCommand { get; private set; }

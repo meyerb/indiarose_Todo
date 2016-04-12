@@ -18,7 +18,6 @@
     </DataTemplate>
   </Resources>
 
-  <service android:name="todoService.TodoService"></service>
   <BindableListView android:layout_width="match_parent"
              android:layout_height="wrap_content"
              adapter="{Binding TodoService.Todos, Template={Resource SizeTemplate}}"

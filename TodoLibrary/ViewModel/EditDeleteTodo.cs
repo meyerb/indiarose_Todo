@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Storm.Mvvm;
 using Storm.Mvvm.Commands;
+using Storm.Mvvm.Inject;
 using Storm.Mvvm.Navigation;
 using Storm.Mvvm.Services;
 using TodoLibrary.Model;
@@ -17,6 +18,8 @@ namespace TodoLibrary.ViewModel
 
         public ICommand ButtonEdit { get; private set; }
         public ICommand ButtonDelete { get; private set; }
+
+        public ITodoService TodoService => LazyResolver<ITodoService>.Service;
 
         private string _title;
         private string _description;

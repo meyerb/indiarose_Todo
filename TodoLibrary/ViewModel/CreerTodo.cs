@@ -2,6 +2,7 @@ using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Storm.Mvvm;
 using Storm.Mvvm.Commands;
+using Storm.Mvvm.Inject;
 using Storm.Mvvm.Navigation;
 using TodoLibrary.Model;
 using TodoLibrary.Services;
@@ -13,6 +14,8 @@ namespace TodoLibrary.ViewModel
         private string _choicetitle;
         private string _choicedescription;
         public ICommand ButtonCommand { get; private set; }
+
+        public ITodoService TodoService => LazyResolver<ITodoService>.Service;
 
         public string ChoiceTitle
         {

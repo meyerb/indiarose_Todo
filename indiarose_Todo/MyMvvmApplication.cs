@@ -6,6 +6,8 @@ using indiarose_Todo.Activities;
 using Storm.Mvvm;
 using Storm.Mvvm.Inject;
 using TodoLibrary;
+using TodoLibrary.Model;
+using TodoLibrary.Services;
 
 namespace indiarose_Todo
 {
@@ -26,7 +28,7 @@ namespace indiarose_Todo
             };
             base.OnCreate();
             AndroidContainer.CreateInstance<AndroidContainer>(this, d);
-            AndroidContainer.GetInstance().RegisterInstance<InterfaceService>(new ITodoService());
+            AndroidContainer.GetInstance().RegisterInstance<ITodoService>(new TodoService());
         }
     }
 }
