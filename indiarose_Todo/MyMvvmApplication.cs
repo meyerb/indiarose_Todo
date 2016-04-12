@@ -17,7 +17,7 @@ namespace indiarose_Todo
 
         public override void OnCreate()
         {
-            Dictionary<string, Type> d = new Dictionary<string, Type>()
+            Dictionary<string, Type> d = new Dictionary<string, Type>
             {
                 {"HomeViewModel", typeof (HomeActivity)},
                 {"CreerTodo", typeof (CreerActivity)}

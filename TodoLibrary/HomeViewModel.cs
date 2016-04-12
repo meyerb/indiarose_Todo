@@ -23,7 +23,7 @@ namespace TodoLibrary
         public ObservableCollection<Todo> Todos
         {
             get { return _todos; }
-            set { _todos = value; }
+            set { SetProperty(ref _todos, value); }
         }
 
         // Since it will only be affected once, we do not need to raise the PropertyChanged event there
@@ -32,16 +32,16 @@ namespace TodoLibrary
         public HomeViewModel()
         {
             ButtonCommand = new DelegateCommand(ButtonClicked);
-            Todos = new ObservableCollection<Todo>();
-            Todo t1 = new Todo("aaffffffff", "bb");
-            Todos.Add(t1);
-            Todo t2 = new Todo("ccfffffff", "dd");
-            Todos.Add(t2);
+            Todos = new ObservableCollection<Todo>
+            {
+                new Todo("aaffffffff","bb"),
+                new Todo("ccfffffff", "dd")
+             };
         }
 
         private void ButtonClicked()
         {
-            NavigationService.Navigate("CreerTodo", new Dictionary<string, object>() {{"Todos", Todos}});
+            NavigationService.Navigate("CreerTodo", new Dictionary<string, object> { { "Todos", Todos } });
         }
     }
 }

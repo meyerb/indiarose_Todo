@@ -60,18 +60,12 @@
     <Compile Include="CreerTodo.cs" />
     <Compile Include="EditDeleteTodo.cs" />
     <Compile Include="HomeViewModel.cs" />
-    <Compile Include="NotifierBase.cs" />
-    <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Todo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ActivityDescription.json" />
     <None Include="packages.config" />
-    <None Include="Resources\AboutResources.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\Values\Strings.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Storm.Mvvm.Android.1.2.21\build\Storm.Mvvm.Android.targets" Condition="Exists('..\packages\Storm.Mvvm.Android.1.2.21\build\Storm.Mvvm.Android.targets')" />

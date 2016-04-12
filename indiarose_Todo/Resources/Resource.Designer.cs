@@ -26,8 +26,6 @@ namespace indiarose_Todo
 		
 		public static void UpdateIdValues()
 		{
-			global::TodoLibrary.Resource.String.ApplicationName = global::indiarose_Todo.Resource.String.ApplicationName;
-			global::TodoLibrary.Resource.String.Hello = global::indiarose_Todo.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
@@ -62,23 +60,23 @@ namespace indiarose_Todo
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050001
-			public const int Generated_ViewElement_10 = 2131034113;
-			
-			// aapt resource value: 0x7f050002
-			public const int Generated_ViewElement_11 = 2131034114;
-			
 			// aapt resource value: 0x7f050003
-			public const int Generated_ViewElement_6 = 2131034115;
+			public const int Generated_ViewElement_36 = 2131034115;
 			
 			// aapt resource value: 0x7f050004
-			public const int Generated_ViewElement_7 = 2131034116;
+			public const int Generated_ViewElement_37 = 2131034116;
 			
 			// aapt resource value: 0x7f050005
-			public const int Generated_ViewElement_8 = 2131034117;
+			public const int Generated_ViewElement_38 = 2131034117;
 			
 			// aapt resource value: 0x7f050000
-			public const int Generated_ViewElement_9 = 2131034112;
+			public const int Generated_ViewElement_39 = 2131034112;
+			
+			// aapt resource value: 0x7f050001
+			public const int Generated_ViewElement_40 = 2131034113;
+			
+			// aapt resource value: 0x7f050002
+			public const int Generated_ViewElement_41 = 2131034114;
 			
 			static Id()
 			{
