@@ -1,15 +1,14 @@
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Storm.Mvvm;
 using Storm.Mvvm.Commands;
 using Storm.Mvvm.Navigation;
-using Storm.Mvvm.Services;
+using TodoLibrary.Model;
 
-namespace TodoLibrary
+namespace TodoLibrary.ViewModel
 {
-    class EditDeleteTodo : ViewModelBase
+    public class EditDeleteTodo : ViewModelBase
     {
         [NavigationParameter]
         public ObservableCollection<Todo> Todos { get; set; }

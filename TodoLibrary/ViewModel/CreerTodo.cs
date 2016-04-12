@@ -1,13 +1,11 @@
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
-using Android.Media;
 using Storm.Mvvm;
 using Storm.Mvvm.Commands;
 using Storm.Mvvm.Navigation;
-using TodoLibrary;
+using TodoLibrary.Model;
 
-namespace TodoLibrary
+namespace TodoLibrary.ViewModel
 {
     public class CreerTodo : ViewModelBase
     {

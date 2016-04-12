@@ -3,21 +3,21 @@
   "fileDescriptions": [
     {
       "activity": {
-        "namespaceName": "indiarose_Todo",
+        "namespaceName": "indiarose_Todo.Activities",
         "className": "HomeActivity"
       },
       "view": {
-        "inputFile": "HomeView.xml",
+        "inputFile": "Views/HomeView.xml",
         "outputFile": "Home.axml"
       }
     },
     {
       "activity": {
-        "namespaceName": "indiarose_Todo",
+        "namespaceName": "indiarose_Todo.Activities",
         "className": "CreerActivity"
       },
       "view": {
-        "inputFile": "CreerView.xml",
+        "inputFile": "Views/CreerView.xml",
         "outputFile": "Creer.axml"
       }
     }

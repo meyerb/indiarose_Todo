@@ -2,8 +2,9 @@ using Android.App;
 using Android.OS;
 using Storm.Mvvm;
 using TodoLibrary;
+using TodoLibrary.ViewModel;
 
-namespace indiarose_Todo
+namespace indiarose_Todo.Activities
 {
     [Activity(Label = "CreerActivity", Icon = "@drawable/icon")]
     public partial class CreerActivity : ActivityBase

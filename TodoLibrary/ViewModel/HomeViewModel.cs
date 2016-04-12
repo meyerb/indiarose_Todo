@@ -4,9 +4,9 @@ using System.Windows.Input;
 using Storm.Mvvm;
 using Storm.Mvvm.Commands;
 using Storm.Mvvm.Navigation;
-using TodoLibrary;
+using TodoLibrary.Model;
 
-namespace TodoLibrary
+namespace TodoLibrary.ViewModel
 {
     public class HomeViewModel : ViewModelBase
     {

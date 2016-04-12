@@ -57,11 +57,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreerTodo.cs" />
-    <Compile Include="EditDeleteTodo.cs" />
-    <Compile Include="HomeViewModel.cs" />
+    <Compile Include="ViewModel\CreerTodo.cs" />
+    <Compile Include="ViewModel\EditDeleteTodo.cs" />
+    <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Todo.cs" />
+    <Compile Include="Model\Todo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ActivityDescription.json" />

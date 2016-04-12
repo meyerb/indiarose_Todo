@@ -10,9 +10,10 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace indiarose_Todo
+namespace TodoLibrary
 {
-    class EditDeleteActivity
+    public class Views
     {
+        public const string VIEW1 = "view1";
     }
 }
