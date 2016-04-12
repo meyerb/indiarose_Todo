@@ -9,4 +9,14 @@
   <EditText android:layout_width="match_parent"
             android:layout_height="wrap_content"
             Text="{Binding Description}"/>
+  <Button android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Edit"
+          Click="{Binding ButtonEdit}"
+          />
+  <Button android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:text="Delete"
+          Click="{Binding ButtonDelete}"
+          />
  </LinearLayout>
