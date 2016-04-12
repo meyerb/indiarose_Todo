@@ -64,8 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreerActivity.cs" />
-    <Compile Include="EditerActivity.cs" />
-    <Compile Include="EditerTodo.cs" />
+    <Compile Include="EditDeleteActivity.cs" />
     <Compile Include="HomeActivity.cs" />
     <Compile Include="MyMvvmApplication.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
@@ -94,7 +93,7 @@
     <Content Include="CreerView.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="EditerView.xml" />
+    <Content Include="EditDeleteView.xml" />
     <Content Include="HomeView.xml">
       <SubType>Designer</SubType>
     </Content>

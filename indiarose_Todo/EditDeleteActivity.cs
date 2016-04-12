@@ -12,7 +12,7 @@ using Android.Widget;
 
 namespace indiarose_Todo
 {
-    class EditerTodo
+    class EditDeleteActivity
     {
     }
 }
