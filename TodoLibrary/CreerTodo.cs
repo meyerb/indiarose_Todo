@@ -21,13 +21,13 @@ namespace TodoLibrary
         public string ChoiceTitle
         {
             get { return _choicetitle; }
-            set { _choicetitle = value; }
+            set { SetProperty(ref _choicetitle, value); }
         }
 
         public string ChoiceDescription
         {
             get { return _choicedescription; }
-            set { _choicedescription = value; }
+            set { SetProperty(ref _choicedescription, value); }
         }
 
         public CreerTodo()
@@ -41,8 +41,7 @@ namespace TodoLibrary
         {
             if (!ChoiceTitle.Equals("") && !ChoiceDescription.Equals(""))
             {
-                Todo t = new Todo(ChoiceTitle, ChoiceDescription);
-                Todos.Add(t);
+                Todos.Add(new Todo(ChoiceTitle, ChoiceDescription));
                 NavigationService.GoBack();
             }
         }
