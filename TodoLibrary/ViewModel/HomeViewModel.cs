@@ -4,6 +4,7 @@ using System.Windows.Input;
 using Storm.Mvvm;
 using Storm.Mvvm.Commands;
 using Storm.Mvvm.Navigation;
+using Storm.Mvvm.Services;
 using TodoLibrary.Model;
 
 namespace TodoLibrary.ViewModel
@@ -46,6 +47,13 @@ namespace TodoLibrary.ViewModel
                 new Todo("aaffffffff","bb"),
                 new Todo("ccfffffff", "dd")
              };
+        }
+
+        public override void OnNavigatedTo(NavigationArgs e, string parametersKey)
+        {
+            base.OnNavigatedTo(e, parametersKey);
+            Todos.Add(new Todo("",""));
+            Todos.RemoveAt(Todos.Count-1);
         }
 
         private void ButtonClicked()

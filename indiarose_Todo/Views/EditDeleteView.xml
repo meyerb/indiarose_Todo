@@ -5,10 +5,10 @@
               android:layout_height="match_parent">
   <EditText android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            Text="{Binding Title}"/>
+            Text="{Binding Title,Mode=TwoWay,UpdateEvent=TextChanged}"/>
   <EditText android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            Text="{Binding Description}"/>
+            Text="{Binding Description,Mode=TwoWay,UpdateEvent=TextChanged}"/>
   <Button android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:text="Edit"

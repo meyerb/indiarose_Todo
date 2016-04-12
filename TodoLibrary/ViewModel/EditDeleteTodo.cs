@@ -54,7 +54,10 @@ namespace TodoLibrary.ViewModel
         }
         private void EditClicked()
         {
-            //NavigationService.Navigate("EditTodo", new Dictionary<string, object>() { { "TestObject", TestObject }, { "Todos", Todos } });
+            int pos=Todos.IndexOf(TestObject);
+            Todos.Insert(pos, new Todo(Title, Description));
+            Todos.RemoveAt(pos+1);
+            NavigationService.GoBack();
         }
     }
 }
