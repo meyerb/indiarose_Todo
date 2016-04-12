@@ -4,6 +4,7 @@ using System.Windows.Input;
 using Storm.Mvvm;
 using Storm.Mvvm.Commands;
 using Storm.Mvvm.Navigation;
+using Storm.Mvvm.Services;
 using TodoLibrary.Model;
 
 namespace TodoLibrary.ViewModel
@@ -14,14 +15,13 @@ namespace TodoLibrary.ViewModel
         public ObservableCollection<Todo> Todos { get; set; }
 
         [NavigationParameter]
-        public object TestObject { get; set; }
+        public Todo TestObject { get; set; }
 
         public ICommand ButtonEdit { get; private set; }
         public ICommand ButtonDelete { get; private set; }
 
         private string _title;
         private string _description;
-        private Todo _todoselect;
 
         public string Title
         {
@@ -34,27 +34,17 @@ namespace TodoLibrary.ViewModel
             set { SetProperty(ref _description, value); }
         }
 
-        private Todo TodoSelect
-        {
-            get { return _todoselect; }
-            set { SetProperty(ref _todoselect, value); }
-        }
-
         public EditDeleteTodo()
         {
             ButtonDelete = new DelegateCommand(DeleteClicked);
             ButtonEdit = new DelegateCommand(EditClicked);
-            TodoSelect = TestObject as Todo;
-            if (TodoSelect != null)
-            {
-                Title = TodoSelect.Title;
-                Description = TodoSelect.Description;
-            }
-            else
-            {
-                Title = "TitreRandom";
-                Description = "DescriptionRandom";
-            }
+        }
+
+        public override void OnNavigatedTo(NavigationArgs e, string parametersKey)
+        {
+            base.OnNavigatedTo(e, parametersKey);
+            Title = TestObject.Title;
+            Description = TestObject.Description;
         }
 
         private void DeleteClicked()

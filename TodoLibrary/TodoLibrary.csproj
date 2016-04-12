@@ -64,7 +64,6 @@
     <Compile Include="Model\Todo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="ActivityDescription.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

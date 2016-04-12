@@ -12,7 +12,7 @@ namespace TodoLibrary.ViewModel
     {
         private ObservableCollection<Todo> _todos;
         private int _index;
-        private object _testobject;
+        private Todo _testobject;
 
         public int Index
         {
@@ -20,7 +20,7 @@ namespace TodoLibrary.ViewModel
             set { SetProperty(ref _index, value); }
         }
 
-        public object TestObject
+        public Todo TestObject
         {
             get { return _testobject; }
             set { SetProperty(ref _testobject, value); }
@@ -56,7 +56,11 @@ namespace TodoLibrary.ViewModel
         private void ButtonSelected()
         {
             if(TestObject!=null)
-                NavigationService.Navigate("EditDeleteTodo", new Dictionary<string, object> { { "TestObject", TestObject}, { "Todos", Todos } } );
+                NavigationService.Navigate("EditDeleteTodo", new Dictionary<string, object>
+                {
+                    { "Todos", Todos },
+                    { "TestObject", TestObject }
+                } );
         }
     }
 }
