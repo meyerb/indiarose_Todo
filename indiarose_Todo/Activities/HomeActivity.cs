@@ -1,7 +1,9 @@
 using Android.App;
+using Android.Content;
 using Android.OS;
 using Storm.Mvvm;
 using TodoLibrary;
+using TodoLibrary.Services;
 using TodoLibrary.ViewModel;
 
 namespace indiarose_Todo.Activities
@@ -17,6 +19,7 @@ namespace indiarose_Todo.Activities
             SetContentView(Resource.Layout.Home);
             // Set our view model
             SetViewModel(new HomeViewModel());
+            StartService(new Intent(this, typeof(TodoService)));
         }
     }
 }

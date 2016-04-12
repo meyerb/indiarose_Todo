@@ -6,12 +6,12 @@ using Storm.Mvvm.Commands;
 using Storm.Mvvm.Navigation;
 using Storm.Mvvm.Services;
 using TodoLibrary.Model;
+using TodoLibrary.Services;
 
 namespace TodoLibrary.ViewModel
 {
     public class HomeViewModel : ViewModelBase
     {
-        private ObservableCollection<Todo> _todos;
         private int _index;
         private Todo _testobject;
 
@@ -28,11 +28,7 @@ namespace TodoLibrary.ViewModel
         }
 
         [NavigationParameter]
-        public ObservableCollection<Todo> Todos
-        {
-            get { return _todos; }
-            set { SetProperty(ref _todos, value); }
-        }
+
 
         // Since it will only be affected once, we do not need to raise the PropertyChanged event there
         public ICommand ButtonCommand { get; private set; }
@@ -42,23 +38,18 @@ namespace TodoLibrary.ViewModel
         {
             ButtonCommand = new DelegateCommand(ButtonClicked);
             ButtonSelection = new DelegateCommand(ButtonSelected);
-            Todos = new ObservableCollection<Todo>
-            {
-                new Todo("aaffffffff","bb"),
-                new Todo("ccfffffff", "dd")
-             };
+            TodoService.StartTodos();
         }
 
         public override void OnNavigatedTo(NavigationArgs e, string parametersKey)
         {
             base.OnNavigatedTo(e, parametersKey);
-            Todos.Add(new Todo("",""));
-            Todos.RemoveAt(Todos.Count-1);
+            TodoService.Initiate();
         }
 
         private void ButtonClicked()
         {
-            NavigationService.Navigate("CreerTodo", new Dictionary<string, object> { { "Todos", Todos } });
+            NavigationService.Navigate("CreerTodo");
         }
 
         private void ButtonSelected()
@@ -66,7 +57,6 @@ namespace TodoLibrary.ViewModel
             if(TestObject!=null)
                 NavigationService.Navigate("EditDeleteTodo", new Dictionary<string, object>
                 {
-                    { "Todos", Todos },
                     { "TestObject", TestObject }
                 } );
         }

@@ -4,14 +4,12 @@ using Storm.Mvvm;
 using Storm.Mvvm.Commands;
 using Storm.Mvvm.Navigation;
 using TodoLibrary.Model;
+using TodoLibrary.Services;
 
 namespace TodoLibrary.ViewModel
 {
     public class CreerTodo : ViewModelBase
     {
-        [NavigationParameter]
-        public ObservableCollection<Todo> Todos { get; set; }
-
         private string _choicetitle;
         private string _choicedescription;
         public ICommand ButtonCommand { get; private set; }
@@ -39,7 +37,7 @@ namespace TodoLibrary.ViewModel
         {
             if (!ChoiceTitle.Equals("") && !ChoiceDescription.Equals(""))
             {
-                Todos.Add(new Todo(ChoiceTitle, ChoiceDescription));
+                TodoService.Add(new Todo(ChoiceTitle, ChoiceDescription));
                 NavigationService.GoBack();
             }
         }

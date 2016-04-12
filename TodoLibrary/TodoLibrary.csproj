@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Services\TodoService.cs" />
     <Compile Include="ViewModel\CreerTodo.cs" />
     <Compile Include="ViewModel\EditDeleteTodo.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />

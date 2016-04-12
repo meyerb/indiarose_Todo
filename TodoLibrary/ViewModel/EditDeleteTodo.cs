@@ -6,14 +6,12 @@ using Storm.Mvvm.Commands;
 using Storm.Mvvm.Navigation;
 using Storm.Mvvm.Services;
 using TodoLibrary.Model;
+using TodoLibrary.Services;
 
 namespace TodoLibrary.ViewModel
 {
     public class EditDeleteTodo : ViewModelBase
     {
-        [NavigationParameter]
-        public ObservableCollection<Todo> Todos { get; set; }
-
         [NavigationParameter]
         public Todo TestObject { get; set; }
 
@@ -49,14 +47,14 @@ namespace TodoLibrary.ViewModel
 
         private void DeleteClicked()
         {
-            Todos.Remove(TestObject as Todo);
+            TodoService.Remove(TestObject as Todo);
             NavigationService.GoBack();
         }
         private void EditClicked()
         {
-            int pos=Todos.IndexOf(TestObject);
-            Todos.Insert(pos, new Todo(Title, Description));
-            Todos.RemoveAt(pos+1);
+            int pos=TodoService.IndexOf(TestObject);
+            TodoService.Insert(pos, new Todo(Title, Description));
+            TodoService.RemoveAt(pos+1);
             NavigationService.GoBack();
         }
     }

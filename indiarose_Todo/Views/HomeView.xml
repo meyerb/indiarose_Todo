@@ -18,9 +18,10 @@
     </DataTemplate>
   </Resources>
 
+  <service android:name="todoService.TodoService"></service>
   <BindableListView android:layout_width="match_parent"
              android:layout_height="wrap_content"
-             adapter="{Binding Todos, Template={Resource SizeTemplate}}"
+             adapter="{Binding TodoService.Todos, Template={Resource SizeTemplate}}"
              CurrentItem="{Binding TestObject, Mode=TwoWay, UpdateEvent=CurrentItemChanged}" />
   <Button android:layout_width="match_parent"
             android:layout_height="wrap_content"
