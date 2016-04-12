@@ -19,7 +19,6 @@ namespace indiarose_Todo.Activities
             SetContentView(Resource.Layout.Home);
             // Set our view model
             SetViewModel(new HomeViewModel());
-            StartService(new Intent(this, typeof(TodoService)));
         }
     }
 }

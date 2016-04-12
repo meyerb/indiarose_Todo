@@ -26,6 +26,7 @@ namespace indiarose_Todo
             };
             base.OnCreate();
             AndroidContainer.CreateInstance<AndroidContainer>(this, d);
+            AndroidContainer.GetInstance().RegisterInstance<InterfaceService>(new ITodoService());
         }
     }
 }
