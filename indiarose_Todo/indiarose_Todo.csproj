@@ -63,16 +63,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreerActivity.cs" />
-    <Compile Include="EditerActivity.cs" />
-    <Compile Include="EditerTodo.cs" />
-    <Compile Include="HomeActivity.cs" />
+    <Compile Include="Activities\CreerActivity.cs" />
+    <Compile Include="Activities\EditerActivity.cs" />
+    <Compile Include="Activities\EditerTodo.cs" />
+    <Compile Include="Activities\HomeActivity.cs" />
     <Compile Include="MyMvvmApplication.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="GettingStarted.Xamarin" />
     <BindingProcess Include="indiarose_Todo.json" />
     <None Include="packages.config" />
     <None Include="Resources\AboutResources.txt" />
@@ -91,11 +90,11 @@
     <Folder Include="Resources\layout\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CreerView.xml">
+    <Content Include="Views\CreerView.xml">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="EditerView.xml" />
-    <Content Include="HomeView.xml">
+    <Content Include="Views\EditerView.xml" />
+    <Content Include="Views\HomeView.xml">
       <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
