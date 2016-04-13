@@ -24,7 +24,8 @@ namespace indiarose_Todo
             {
                 {"HomeViewModel", typeof (HomeActivity)},
                 {"CreerTodo", typeof (CreerActivity)},
-                {"EditDeleteTodo" , typeof(EditDeleteActivity)}
+                {"EditDeleteTodo" , typeof(EditDeleteActivity)},
+                {"RegisterLoginViewModel" ,typeof(RegisterLoginActivity)}
             };
             base.OnCreate();
             AndroidContainer.CreateInstance<AndroidContainer>(this, d);

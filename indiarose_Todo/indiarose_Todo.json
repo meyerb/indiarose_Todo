@@ -30,6 +30,16 @@
         "inputFile": "Views/EditDeleteView.xml",
         "outputFile": "EditDelete.axml"
       }
+    },
+    {
+      "activity": {
+        "namespaceName": "indiarose_Todo.Activities",
+        "className": "RegisterLoginActivity"
+      },
+      "view": {
+        "inputFile": "Views/RegisterLoginView.xml",
+        "outputFile": "RegisterLogin.axml"
+      }
     }
   ]
 }

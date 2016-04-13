@@ -8,7 +8,7 @@ using TodoLibrary.ViewModel;
 
 namespace indiarose_Todo.Activities
 {
-    [Activity(Label = "HomeActivity", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "HomeActivity", Icon = "@drawable/icon")]
     public partial class HomeActivity : ActivityBase
     {
         protected override void OnCreate(Bundle bundle)

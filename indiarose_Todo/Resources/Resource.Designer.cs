@@ -26,6 +26,8 @@ namespace indiarose_Todo
 		
 		public static void UpdateIdValues()
 		{
+			global::PCLCrypto.Resource.String.ApplicationName = global::indiarose_Todo.Resource.String.ApplicationName;
+			global::PCLCrypto.Resource.String.Hello = global::indiarose_Todo.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
@@ -61,37 +63,49 @@ namespace indiarose_Todo
 		{
 			
 			// aapt resource value: 0x7f050007
-			public const int Generated_ViewElement_33 = 2131034119;
+			public const int Generated_ViewElement_60 = 2131034119;
 			
 			// aapt resource value: 0x7f050008
-			public const int Generated_ViewElement_34 = 2131034120;
+			public const int Generated_ViewElement_61 = 2131034120;
 			
 			// aapt resource value: 0x7f050009
-			public const int Generated_ViewElement_35 = 2131034121;
+			public const int Generated_ViewElement_62 = 2131034121;
 			
 			// aapt resource value: 0x7f05000a
-			public const int Generated_ViewElement_36 = 2131034122;
+			public const int Generated_ViewElement_63 = 2131034122;
 			
 			// aapt resource value: 0x7f050000
-			public const int Generated_ViewElement_37 = 2131034112;
+			public const int Generated_ViewElement_64 = 2131034112;
 			
 			// aapt resource value: 0x7f050001
-			public const int Generated_ViewElement_38 = 2131034113;
+			public const int Generated_ViewElement_65 = 2131034113;
 			
 			// aapt resource value: 0x7f050002
-			public const int Generated_ViewElement_39 = 2131034114;
+			public const int Generated_ViewElement_66 = 2131034114;
 			
 			// aapt resource value: 0x7f050003
-			public const int Generated_ViewElement_40 = 2131034115;
+			public const int Generated_ViewElement_67 = 2131034115;
 			
 			// aapt resource value: 0x7f050004
-			public const int Generated_ViewElement_41 = 2131034116;
+			public const int Generated_ViewElement_68 = 2131034116;
 			
 			// aapt resource value: 0x7f050005
-			public const int Generated_ViewElement_42 = 2131034117;
+			public const int Generated_ViewElement_69 = 2131034117;
 			
 			// aapt resource value: 0x7f050006
-			public const int Generated_ViewElement_43 = 2131034118;
+			public const int Generated_ViewElement_70 = 2131034118;
+			
+			// aapt resource value: 0x7f05000b
+			public const int Generated_ViewElement_71 = 2131034123;
+			
+			// aapt resource value: 0x7f05000c
+			public const int Generated_ViewElement_72 = 2131034124;
+			
+			// aapt resource value: 0x7f05000d
+			public const int Generated_ViewElement_73 = 2131034125;
+			
+			// aapt resource value: 0x7f05000e
+			public const int Generated_ViewElement_74 = 2131034126;
 			
 			static Id()
 			{
@@ -117,6 +131,9 @@ namespace indiarose_Todo
 			
 			// aapt resource value: 0x7f030003
 			public const int Home_DT_SizeTemplate = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int RegisterLogin = 2130903044;
 			
 			static Layout()
 			{
