@@ -16,6 +16,7 @@ namespace TodoLibrary.ViewModel
         public ICommand ButtonCommand { get; private set; }
 
         public ITodoService TodoService => LazyResolver<ITodoService>.Service;
+        public IHttpService HttpService => LazyResolver<IHttpService>.Service;
 
         public string ChoiceTitle
         {

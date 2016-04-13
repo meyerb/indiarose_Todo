@@ -25,8 +25,7 @@ namespace TodoLibrary.ViewModel
         private string _login;
         private string _pwd;
 
-        [NavigationParameter]
-
+        public ITodoService TodoService => LazyResolver<ITodoService>.Service;
         public IHttpService HttpService => LazyResolver<IHttpService>.Service;
 
         public ICommand ButtonRegister { get; private set; }

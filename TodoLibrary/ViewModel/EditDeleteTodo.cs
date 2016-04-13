@@ -20,6 +20,7 @@ namespace TodoLibrary.ViewModel
         public ICommand ButtonDelete { get; private set; }
 
         public ITodoService TodoService => LazyResolver<ITodoService>.Service;
+        public IHttpService HttpService => LazyResolver<IHttpService>.Service;
 
         private string _title;
         private string _description;

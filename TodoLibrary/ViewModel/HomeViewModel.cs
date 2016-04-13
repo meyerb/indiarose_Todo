@@ -28,9 +28,8 @@ namespace TodoLibrary.ViewModel
             set { SetProperty(ref _testobject, value); }
         }
 
-        [NavigationParameter]
-
         public ITodoService TodoService => LazyResolver<ITodoService>.Service;
+        public IHttpService HttpService => LazyResolver<IHttpService>.Service;
 
         // Since it will only be affected once, we do not need to raise the PropertyChanged event there
         public ICommand ButtonCommand { get; private set; }

@@ -63,49 +63,52 @@ namespace indiarose_Todo
 		{
 			
 			// aapt resource value: 0x7f050007
-			public const int Generated_ViewElement_60 = 2131034119;
+			public const int Generated_ViewElement_0 = 2131034119;
 			
 			// aapt resource value: 0x7f050008
-			public const int Generated_ViewElement_61 = 2131034120;
-			
-			// aapt resource value: 0x7f050009
-			public const int Generated_ViewElement_62 = 2131034121;
-			
-			// aapt resource value: 0x7f05000a
-			public const int Generated_ViewElement_63 = 2131034122;
-			
-			// aapt resource value: 0x7f050000
-			public const int Generated_ViewElement_64 = 2131034112;
-			
-			// aapt resource value: 0x7f050001
-			public const int Generated_ViewElement_65 = 2131034113;
-			
-			// aapt resource value: 0x7f050002
-			public const int Generated_ViewElement_66 = 2131034114;
-			
-			// aapt resource value: 0x7f050003
-			public const int Generated_ViewElement_67 = 2131034115;
-			
-			// aapt resource value: 0x7f050004
-			public const int Generated_ViewElement_68 = 2131034116;
+			public const int Generated_ViewElement_1 = 2131034120;
 			
 			// aapt resource value: 0x7f050005
-			public const int Generated_ViewElement_69 = 2131034117;
+			public const int Generated_ViewElement_10 = 2131034117;
 			
 			// aapt resource value: 0x7f050006
-			public const int Generated_ViewElement_70 = 2131034118;
-			
-			// aapt resource value: 0x7f05000b
-			public const int Generated_ViewElement_71 = 2131034123;
+			public const int Generated_ViewElement_11 = 2131034118;
 			
 			// aapt resource value: 0x7f05000c
-			public const int Generated_ViewElement_72 = 2131034124;
+			public const int Generated_ViewElement_12 = 2131034124;
 			
 			// aapt resource value: 0x7f05000d
-			public const int Generated_ViewElement_73 = 2131034125;
+			public const int Generated_ViewElement_13 = 2131034125;
 			
 			// aapt resource value: 0x7f05000e
-			public const int Generated_ViewElement_74 = 2131034126;
+			public const int Generated_ViewElement_14 = 2131034126;
+			
+			// aapt resource value: 0x7f05000f
+			public const int Generated_ViewElement_15 = 2131034127;
+			
+			// aapt resource value: 0x7f050009
+			public const int Generated_ViewElement_2 = 2131034121;
+			
+			// aapt resource value: 0x7f05000a
+			public const int Generated_ViewElement_3 = 2131034122;
+			
+			// aapt resource value: 0x7f05000b
+			public const int Generated_ViewElement_4 = 2131034123;
+			
+			// aapt resource value: 0x7f050000
+			public const int Generated_ViewElement_5 = 2131034112;
+			
+			// aapt resource value: 0x7f050001
+			public const int Generated_ViewElement_6 = 2131034113;
+			
+			// aapt resource value: 0x7f050002
+			public const int Generated_ViewElement_7 = 2131034114;
+			
+			// aapt resource value: 0x7f050003
+			public const int Generated_ViewElement_8 = 2131034115;
+			
+			// aapt resource value: 0x7f050004
+			public const int Generated_ViewElement_9 = 2131034116;
 			
 			static Id()
 			{
