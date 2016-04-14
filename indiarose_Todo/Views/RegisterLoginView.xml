@@ -9,6 +9,7 @@
             Text="{Binding Login,Mode=TwoWay,UpdateEvent=TextChanged}"/>
   <EditText android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            InputType="TextVariationPassword"
             Text="{Binding Pwd,Mode=TwoWay,UpdateEvent=TextChanged}"/>
   <Button android:layout_width="match_parent"
          android:layout_height="wrap_content"
