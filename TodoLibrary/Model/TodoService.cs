@@ -37,7 +37,7 @@ namespace TodoLibrary.Model
 
         public void Initiate()
         {
-            Todos.Add(new Todo("",""));
+            Todos.Add(new Todo("","",""));
             Todos.RemoveAt(Todos.Count-1);
         }
 

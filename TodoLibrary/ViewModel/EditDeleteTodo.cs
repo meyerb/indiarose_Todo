@@ -51,14 +51,17 @@ namespace TodoLibrary.ViewModel
 
         private void DeleteClicked()
         {
-            TodoService.Remove(TestObject as Todo);
+            TodoService.Remove(TestObject);
+            HttpService.DeleteTodo(TestObject.Id);
             NavigationService.GoBack();
         }
         private void EditClicked()
         {
             int pos=TodoService.IndexOf(TestObject);
-            TodoService.Insert(pos, new Todo(Title, Description));
+            Todo nt= new Todo(TestObject.Id,TestObject.Title,TestObject.Description);
+            TodoService.Insert(pos, nt);
             TodoService.RemoveAt(pos+1);
+            HttpService.EditTodo(nt.Id,nt.Title,nt.Description);
             NavigationService.GoBack();
         }
     }

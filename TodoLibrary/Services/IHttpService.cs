@@ -16,7 +16,7 @@ namespace TodoLibrary.Services
     {
         bool Connection(string login,string pwd);
         bool Register(string login,string pwd);
-        bool AddTodo(string title,string description);
+        string AddTodo(string title,string description);
         string GetTodos();
         bool EditTodo(string id,string title,string description);
         bool DeleteTodo(string id);

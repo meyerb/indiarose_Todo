@@ -1,5 +1,6 @@
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using Newtonsoft.Json;
 using Storm.Mvvm;
 using Storm.Mvvm.Commands;
 using Storm.Mvvm.Inject;
@@ -41,8 +42,9 @@ namespace TodoLibrary.ViewModel
         {
             if (!ChoiceTitle.Equals("") && !ChoiceDescription.Equals(""))
             {
-                TodoService.Add(new Todo(ChoiceTitle, ChoiceDescription));
-                HttpService.AddTodo(ChoiceTitle, ChoiceDescription);
+                string res= HttpService.AddTodo(ChoiceTitle, ChoiceDescription);
+                Todo nt=JsonConvert.DeserializeObject<Todo>(res);
+                TodoService.Add(nt);
                 NavigationService.GoBack();
             }
         }

@@ -28,8 +28,9 @@ namespace TodoLibrary.Model
             set { SetProperty(ref _description, value); }
         }
 
-        public Todo(string t, string d)
+        public Todo(string id,string t, string d)
         {
+            _id = id;
             _title = t;
             _description = d;
             ButtonCommand = new DelegateCommand(ButtonEdit);
