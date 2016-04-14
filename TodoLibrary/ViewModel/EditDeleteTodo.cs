@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using Newtonsoft.Json;
 using Storm.Mvvm;
 using Storm.Mvvm.Commands;
 using Storm.Mvvm.Inject;
@@ -57,11 +58,11 @@ namespace TodoLibrary.ViewModel
         }
         private void EditClicked()
         {
-            int pos=TodoService.IndexOf(TestObject);
-            Todo nt= new Todo(TestObject.Id,TestObject.Title,TestObject.Description);
+            int pos = TodoService.IndexOf(TestObject);
+            string res=HttpService.EditTodo(TestObject.Id, Title, Description);
+            Todo nt = JsonConvert.DeserializeObject<Todo>(res);
             TodoService.Insert(pos, nt);
-            TodoService.RemoveAt(pos+1);
-            HttpService.EditTodo(nt.Id,nt.Title,nt.Description);
+            TodoService.RemoveAt(pos + 1);
             NavigationService.GoBack();
         }
     }

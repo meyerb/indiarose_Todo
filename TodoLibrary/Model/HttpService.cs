@@ -186,7 +186,7 @@ namespace TodoLibrary.Model
                 return ""; }
             return ResponseJson.Resource.ToString();
         }
-        public bool EditTodo(string id,string title, string description)
+        public string EditTodo(string id,string title, string description)
         {
             IEnumerable<KeyValuePair<string, string>> data = new List<KeyValuePair<string, string>>()
             {
@@ -218,8 +218,8 @@ namespace TodoLibrary.Model
             }
             catch (AggregateException a)
             {
-                return false; }
-            return ResponseJson.Ok;
+                return ""; }
+            return ResponseJson.Resource.ToString();
         }
         public bool DeleteTodo(string id)
         {

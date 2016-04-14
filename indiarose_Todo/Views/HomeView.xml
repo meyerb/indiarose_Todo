@@ -30,12 +30,4 @@
            android:layout_height="wrap_content"
            android:text="Edit/Delete"
            Click="{Binding ButtonSelection}"/>
-  <EditText android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-            Text="{Binding HttpService.ResponseValue}"
-            />
-  <EditText android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-            Text="{Binding HttpService.ResponseListe}"
-            />
 </LinearLayout>

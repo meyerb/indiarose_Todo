@@ -50,8 +50,6 @@ namespace TodoLibrary.ViewModel
         public override void OnNavigatedTo(NavigationArgs e, string parametersKey)
         {
             base.OnNavigatedTo(e, parametersKey);
-            //string collection = HttpService.GetTodos();
-            //TodoService.StartTodos(JsonConvert.DeserializeObject<ObservableCollection<Todo>>(collection));
             TodoService.Initiate();
         }
 
