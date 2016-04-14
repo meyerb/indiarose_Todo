@@ -149,7 +149,7 @@ namespace TodoLibrary.Model
             catch (AggregateException a)
             {
                 return ""; }
-            return ResponseJson.Resource;
+            return ResponseJson.Resource.ToString();
         }
 
         public bool AddTodo(string title,string description)

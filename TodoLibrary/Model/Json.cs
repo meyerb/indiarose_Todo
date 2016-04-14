@@ -17,7 +17,7 @@ namespace TodoLibrary.Model
     {
         private bool _ok;
         private string _error;
-        private string _resource;
+        private Object _resource;
 
         public bool Ok
         {
@@ -29,7 +29,7 @@ namespace TodoLibrary.Model
             get { return _error; }
             set { SetProperty(ref _error, value); }
         }
-        public string Resource
+        public Object Resource
         {
             get { return _resource; }
             set { SetProperty(ref _resource, value); }
