@@ -50,14 +50,14 @@ namespace TodoLibrary.ViewModel
 
         private void ClickedRegister()
         {
-            HttpService.Register(Login, Pwd);
-            NavigationService.Navigate("HomeViewModel");
+            if(HttpService.Register(Login, Pwd))
+                NavigationService.Navigate("HomeViewModel");
         }
 
         private void ClickedLogin()
         {
-            HttpService.Connection(Login,Pwd);
-            NavigationService.Navigate("HomeViewModel");
+            if(HttpService.Connection(Login,Pwd))
+                NavigationService.Navigate("HomeViewModel");
         }
     }
 }

@@ -18,6 +18,8 @@ namespace TodoLibrary.Services
     {
         void StartTodos();
 
+        void StartTodos(ObservableCollection<Todo> c);
+
         void Initiate();
 
         void Add(Todo nt);

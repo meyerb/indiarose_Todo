@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using Newtonsoft.Json;
 using Storm.Mvvm;
 using Storm.Mvvm.Commands;
 using Storm.Mvvm.Inject;
@@ -39,7 +40,11 @@ namespace TodoLibrary.ViewModel
         {
             ButtonCommand = new DelegateCommand(ButtonClicked);
             ButtonSelection = new DelegateCommand(ButtonSelected);
-            TodoService.StartTodos();
+            string collection = HttpService.GetTodos();
+            if(collection!=null)
+                TodoService.StartTodos(JsonConvert.DeserializeObject<ObservableCollection<Todo>>(collection));
+            else
+                TodoService.StartTodos();
         }
 
         public override void OnNavigatedTo(NavigationArgs e, string parametersKey)

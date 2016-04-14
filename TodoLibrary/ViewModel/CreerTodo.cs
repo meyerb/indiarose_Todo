@@ -42,6 +42,7 @@ namespace TodoLibrary.ViewModel
             if (!ChoiceTitle.Equals("") && !ChoiceDescription.Equals(""))
             {
                 TodoService.Add(new Todo(ChoiceTitle, ChoiceDescription));
+                HttpService.AddTodo(ChoiceTitle, ChoiceDescription);
                 NavigationService.GoBack();
             }
         }

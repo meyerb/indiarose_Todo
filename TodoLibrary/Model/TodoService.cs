@@ -27,9 +27,12 @@ namespace TodoLibrary.Model
 
         public void StartTodos()
         {
-            Todos= new ObservableCollection<Todo>();
-            Todos.Add(new Todo("aa","bb"));
-            Todos.Add(new Todo("cc", "dd"));
+            Todos = new ObservableCollection<Todo>();
+        }
+
+        public void StartTodos(ObservableCollection<Todo> c)
+        {
+            Todos = c;
         }
 
         public void Initiate()
