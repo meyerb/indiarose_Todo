@@ -17,6 +17,7 @@ using Storm.Mvvm.Inject;
 using Storm.Mvvm.Navigation;
 using TodoLibrary.Model;
 using TodoLibrary.Services;
+using PCLCrypto;
 
 namespace TodoLibrary.ViewModel
 {
@@ -50,13 +51,25 @@ namespace TodoLibrary.ViewModel
 
         private void ClickedRegister()
         {
-            if(HttpService.Register(Login, Pwd))
+            byte[] data = Encoding.ASCII.GetBytes(Pwd);
+            var hasher = WinRTCrypto.HashAlgorithmProvider.OpenAlgorithm(HashAlgorithm.Sha1);
+            byte[] hash = hasher.HashData(data);
+            StringBuilder hex = new StringBuilder(hash.Length * 2);
+            foreach (byte b in hash)
+                hex.AppendFormat("{0:x2}", b);
+            if (HttpService.Register(Login, hex.ToString()))
                 NavigationService.Navigate("HomeViewModel");
         }
 
         private void ClickedLogin()
         {
-            if(HttpService.Connection(Login,Pwd))
+            byte[] data = Encoding.ASCII.GetBytes(Pwd);
+            var hasher = WinRTCrypto.HashAlgorithmProvider.OpenAlgorithm(HashAlgorithm.Sha1);
+            byte[] hash = hasher.HashData(data);
+            StringBuilder hex = new StringBuilder(hash.Length * 2);
+            foreach (byte b in hash)
+                hex.AppendFormat("{0:x2}", b);
+            if (HttpService.Connection(Login,hex.ToString()))
                 NavigationService.Navigate("HomeViewModel");
         }
     }
